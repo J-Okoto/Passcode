@@ -4,3 +4,9 @@ class User:
     """
 
     pass
+    def __init__(self, username, password):
+        """
+        __init__method that defines the properties of a user.
+        """
+        self.username = username
+        self.password = password
