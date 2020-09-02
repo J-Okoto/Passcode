@@ -9,7 +9,7 @@ class TestClass(unittest.TestCase):
         """
         Method that runs before each individual test methods run.
         """
-        self.new_user = User('J-Okoto','hushpuppy')
+        self.new_user = User('J-Okoto','hushpuppy01')
 
     def test_init(self):
         """
@@ -17,3 +17,5 @@ class TestClass(unittest.TestCase):
         """
         self.assertEqual(self.new_user.username,'J-Okoto')
         self.assertEqual(self.new_user.password,'hushpuppy01')   
+if __name__ == '__main__':
+    unittest.main()        
