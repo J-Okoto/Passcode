@@ -53,7 +53,12 @@ class TestCredentials(unittest.TestCase):
         """
         self.new_credential.save_details()
         self.assertEqual(len(Credentials.credentials_list),1)
-
+    
+    def tearDown(self):
+        '''
+        method that does clean up after each test case has run.
+        '''
+        Credentials.credentials_list = []
     
 
     def test_save_many_accounts(self):
@@ -64,6 +69,7 @@ class TestCredentials(unittest.TestCase):
         test_credential = Credentials("Twitter","J-Okoto","hushpappy03") 
         test_credential.save_details()
         self.assertEqual(len(Credentials.credentials_list),2)
+    
     def test_delete_credential(self):
         """
         test method to test if we can remove an account credentials from our credentials_list
@@ -74,6 +80,14 @@ class TestCredentials(unittest.TestCase):
 
         self.new_credential.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list),1)
+
+    def test_display_all_saved_credentials(self):
+        '''
+        method that displays all the credentials that has been saved by the user
+        '''
+
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
+
 
 if __name__ == '__main__':
     unittest.main()        
