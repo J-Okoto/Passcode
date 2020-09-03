@@ -16,4 +16,10 @@ class User:
         A method that saves a new user instace into the user list
         """
         User.user_list.append(self)
+
+class Credentials():
+    """
+    Create credentials class to help create new objects of credentials
+    """
+    credentials_list = []
     
