@@ -1,5 +1,6 @@
 import unittest
 from code import User
+from code import Credentials
 
 class TestClass(unittest.TestCase):
     """
@@ -35,7 +36,7 @@ class TestCredentials(unittest.TestCase):
         """
         Method that runs before each individual credentials test methods run.
         """
-        self.new_credential = Credentials('Gmail','J-Okoto','hashpuppy02')
+        self.new_credential = Credentials('Gmail','J-Okoto','hushpuppy02')
 
     def test_init(self):
         """
@@ -43,7 +44,7 @@ class TestCredentials(unittest.TestCase):
         """
         self.assertEqual(self.new_credential.account,'Gmail')
         self.assertEqual(self.new_credential.userName,'J-Okoto')
-        self.assertEqual(self.new_credential.password,'hushpuppy2')
+        self.assertEqual(self.new_credential.password,'hushpuppy02')
 
 
 if __name__ == '__main__':

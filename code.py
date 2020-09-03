@@ -17,7 +17,7 @@ class User:
         """
         User.user_list.append(self)
 
-class Credentials():
+class Credentials:
     """
     Create credentials class to help create new objects of credentials
     """
@@ -29,5 +29,5 @@ class Credentials():
         self.account = account
         self.userName = userName
         self.password = password
-        
+
     
