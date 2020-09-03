@@ -27,6 +27,17 @@ class TestClass(unittest.TestCase):
         self.assertEqual(len(User.user_list),1)
 
 
+class TestCredentials(unittest.TestCase):
+    """
+    A test class that defines test cases for credentials class
+    """ 
+    def setUp(self):
+        """
+        Method that runs before each individual credentials test methods run.
+        """
+        self.new_credential = Credentials('Gmail','J-Okoto','hashpuppy02')
+
+
 
 
 if __name__ == '__main__':
