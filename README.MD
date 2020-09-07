@@ -1,4 +1,4 @@
-# Password-Locker
+# Passcode
 ## Author
 
 [J-Okoto](https://github.com/J-Okoto)g
