@@ -20,12 +20,24 @@ class User:
         A method that saves a new user instace into the user list
         """
         User.user_list.append(self)
+    
 
 class Credentials():
     """
     Create credentials class to help create new objects of credentials
     """
     credentials_list = []
+    @classmethod
+    def verify_user(cls,username, password):
+        """
+        method to verify whether the user is in our user_list or not
+        """
+        a_user = ""
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                    a_user == user.username
+        return a_user
+
     def __init__(self,account,userName, password):
         """
         method that defines user credentials to be stored
@@ -46,12 +58,7 @@ class Credentials():
         """
         Credentials.credentials_list.remove(self)
     
-    @classmethod
-    def display_credentials(cls):
-        """
-        Method that returns all items in the credentials list
-        """
-        return cls.credentials_list
+    
 
     @classmethod
     def find_credential(cls, account):
@@ -75,7 +82,14 @@ class Credentials():
                 return True
         return False
 
-def generatePassword(stringLength=8):
+    @classmethod
+    def display_credentials(cls):
+        """
+        Method that returns all items in the credentials list
+        """
+        return cls.credentials_list
+
+    def generatePassword(stringLength=8):
         """Generate a random password string of letters and digits and special characters"""
         password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
         return ''.join(random.choice(password) for i in range(stringLength))
