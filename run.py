@@ -78,7 +78,7 @@ def copy_password(account):
     return Credentials.copy_password(account)
 
 
-def code():
+def main():
     print("Hello Welcome to your Code Accounts ...\n Please enter one of the following to proceed.\n CA ---  Create New Account  \n LI ---  Have An Account  \n")
     short_code=input("").lower().strip()
     if short_code == "ca":
@@ -185,4 +185,4 @@ def code():
         print("Please enter a valid input to continue")
 
 if __name__ == '__main__':
-    code()
+    main()
