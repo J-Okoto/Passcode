@@ -93,7 +93,7 @@ class TestCredentials(unittest.TestCase):
         test to check if we can find a credential entry by account name and display the details of the credential
         """
         self.new_credential.save_details()
-        test_credential = Credentials("Twitter","mikeycharles","Mfh45hfk") 
+        test_credential = Credentials("Twitter","J-Okoto","hushpuppy03") 
         test_credential.save_details()
 
         the_credential = Credentials.find_credential("Twitter")
